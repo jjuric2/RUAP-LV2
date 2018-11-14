@@ -1,8 +1,8 @@
 <?php
-$host = "j1juric-mysqldbserver.mysql.database.azure.com";
-$user = "j1juric@j1juric-mysqldbserver";
-$pwd = "HdVb.332";
-$db = "j1juricdb";
+$host = "mstjepanek-mysqldbserver.mysql.database.azure.com";
+$user = "mstjepanek@mstjepanek-mysqldbserver";
+$pwd = "DbFz.343";
+$db = "mstjepanekdb";
  // $host = "127.0.0.1:52932";
  // $user = "azure";
  // $pwd = "6#vWHD_$";

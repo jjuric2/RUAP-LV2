@@ -24,50 +24,54 @@
  }
  h2 {
  font-size: 1.75em;
-}
-h3 {
-font-size: 1.2em;
-}
-table {
-margin-top: 0.75em;
-}
-th {
-font-size: 1.2em;
-text-align: left;
-border: none;
-padding-left: 0;
-}
-td {
-padding: 0.25em 2em 0.25em 0em;
-border: 0 none;
-}
-</style>
+ }
+ h3 {
+ font-size: 1.2em;
+ }
+ table {
+ margin-top: 0.75em;
+ }
+ th {
+ font-size: 1.2em;
+ text-align: left;
+ border: none;
+ padding-left: 0;
+ }
+ td {
+ padding: 0.25em 2em 0.25em 0em;
+ border: 0 none;
+ }
+ </style>
 </head>
 <body>
-<h1>Register here!</h1>
-<p>Fill in your name and email address, then click <strong>Submit</strong> to
+ <h1>Register here!</h1>
+ <p>Fill in your name and email address, then click <strong>Submit</strong> to
 register.</p>
-<form method="post" action="index.php" enctype="multipart/form-data">
-Name
-<input type="text" name="name" id="name" />
-</br> Email
-<input type="text" name="email" id="email" />
-</br>
-<input type="submit" name="submit" value="Submit" />
-</form>
-<?php
+ <form method="post" action="index.php" enctype="multipart/form-data">
+ Name
+ <input type="text" name="name" id="name" />
+ </br> Email
+ <input type="text" name="email" id="email" />
+ </br>
+ <input type="submit" name="submit" value="Submit" />
+ </form>
+ <?php
 // DB connection info
 // TODO: Update the values for $host, $user, $pwd, and $db //using the values you retrieved
-//earlier from the Azure Portal. $host = "value of Data Source";
-$host = "j1juric-mysqldbserver.mysql.database.azure.com";
-$user = "j1juric@j1juric-mysqldbserver";
-$pwd = "HdVb.332";
-$db = "j1juricdb";
+// earlier from the Azure Portal. $host = "value of Data Source";
+//$host = "localhost";
+//$user = "mstjepanek";
+//$pwd = "DbFz.343";
+//$db = "mstjepanekDatabase";
+$host = "mstjepanek-mysqldbserver.mysql.database.azure.com";
+$user = "mstjepanek@mstjepanek-mysqldbserver";
+$pwd = "DbFz.343";
+$db = "mstjepanekdb";
 // Connect to database.
 $conn = mysqli_connect($host, $user, $pwd, $db);
 if (mysqli_connect_errno())
 {
-  echo "<h3>Failed to connect to MySQL:</h3> " . mysqli_connect_error();
+	echo "<h3>Failed to connect to MySQL:</h3> " . mysqli_connect_error();
 }
  else
 {
@@ -110,7 +114,7 @@ echo "<h3>No one is currently registered.</h3>";
 }
  else
 {
-  echo "Insert Failed";
+	echo "Insert Failed";
 }
 }
 ?>
